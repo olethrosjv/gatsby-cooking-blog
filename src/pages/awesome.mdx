@@ -1,0 +1,36 @@
+---
+title: Hello, world!
+author: Jay Gatsby
+date: 2019-01-29
+---
+
+# Hello, world!
+<h1>{props.pageContext.frontmatter.title}</h1>
+<span>{props.pageContext.frontmatter.author}</span>
+<span>{props.pageContext.frontmatter.date}</span>
+
+# Here’s a form
+
+<SignUpForm />
+
+
+
+import { graphql } from "gatsby";
+import SignUpForm from "../components/signUpForm";
+
+
+export const query = graphql`
+    query {
+        allMdx {
+            edges {
+            node {
+                frontmatter {
+                title
+                author
+                date(formatString: "MMMM DD, YYYY")
+                }
+            }
+            }
+        }
+    }
+`;
