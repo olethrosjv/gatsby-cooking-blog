@@ -24,7 +24,7 @@ const SignUpForm = () => {
         }, 400);
       }}
     >
-      <Form method="post" netlify-honeypot="bot-field" data-netlify="true">
+      <Form method="post" netlify-honeypot="bot-field" data-netlify="true" netlify>
       <input type="hidden" name="bot-field" />
         <label htmlFor="firstName">First Name</label>
         <Field name="firstName" type="text" />
