@@ -26,14 +26,20 @@ module.exports = {
     `gatsby-plugin-mdx`,
     {
       resolve: `gatsby-plugin-manifest`,
+        options: {
+          name: `GatsbyJS`,
+          short_name: `GatsbyJS`,
+          start_url: `/`,
+          background_color: `#f7f0eb`,
+          theme_color: `#a2466c`,
+          display: `standalone`,
+        //icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: `gatsby-plugin-offline`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
-        start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        precachePages: [`/about/`, `/index/`, '/page-2/', '/404/', '/awesome/'],
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
