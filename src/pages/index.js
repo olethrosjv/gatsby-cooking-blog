@@ -1,6 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
-
+import Nav from "../components/nav"
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
@@ -15,14 +14,7 @@ const IndexPage = () => (
   borderRadius: `100px`, background: `#eeeeee`, boxShadow: `20px 20px 50px #121212` }}>
       <Image />
     </div>
-    <nav>
-    <ul>
-      <li><Link to="/page-2/">Go to page 2</Link></li>
-      <li><Link to="/about/">About Us</Link></li>
-      <li><Link to="/awesome/">Awesome</Link></li>
-      <li><Link to="/another/">Another</Link></li>
-    </ul>
-    </nav>
+    <Nav />
 
   </Layout>
 )

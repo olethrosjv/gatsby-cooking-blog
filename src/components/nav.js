@@ -1,4 +1,6 @@
 import React from "react"
+import "./layout.css"
+import { Link } from "gatsby"
 
 
 const Nav = () => (
@@ -49,6 +51,8 @@ Styling from CodePen. You will need to change colors to fit with site
 .dropdownmenu li:hover a {
 	background: #000000;
 }
+------------ Not yet currently part of component style---------------
+
 #submenu {
 	left: 0;
 	opacity: 0;
